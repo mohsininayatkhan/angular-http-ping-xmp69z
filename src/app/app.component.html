@@ -1,0 +1,8 @@
+<hello name="{{ name }}"></hello>
+<p>
+  Start editing to see some magic happen :)
+</p>
+
+<div [ngClass]="(conn.connected$ | async) ? 'success' : 'error'">
+  <span><b> Ping {{ (conn.connected$ | async) ? 'Success' : 'Failed... Retrying...' }} </b></span>
+</div>
